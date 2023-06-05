@@ -1,0 +1,111 @@
+.bubble {
+  position: relative;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 100%;
+  block-size: 150px;
+  color: black;
+  inline-size: 150px;
+  transition: all 500ms ease-in-out;
+}
+
+.bubble.light {
+  background:
+    radial-gradient(
+      circle at 50% 55%,
+      rgb(229 229 229 / 50%),
+      rgb(193 193 193 / 60%) 40%,
+      rgb(223 223 223 / 70%) 60%,
+      rgba(var(--v-theme-background), 0.4) 75%
+    );
+}
+
+.bubble.dark {
+  background:
+    radial-gradient(
+      circle at 50% 55%,
+      rgb(146 150 157 / 50%),
+      rgb(150 155 165 / 60%) 40%,
+      rgb(140 146 159 / 70%) 60%,
+      rgba(var(--v-theme-background), 0.4) 75%
+    );
+}
+
+.bubble::before {
+  display: inline-block;
+  content: "";
+  padding-block-start: 100%;
+}
+
+.bubble::after {
+  position: absolute;
+  z-index: 2;
+  display: block;
+  border-radius: 100%;
+  background:
+    radial-gradient(
+      circle at 50% 80%,
+      rgba(255, 255, 255, 0%),
+      rgba(255, 255, 255, 0%) 74%,
+      white 85%,
+      rgba(255, 255, 255, 0%) 100%
+    );
+  block-size: 100%;
+  content: "";
+  filter: blur(1px);
+  inline-size: 100%;
+  inset-block-start: 0;
+  inset-inline-end: 0;
+  transform: rotateZ(-30deg);
+}
+
+.w150px {
+  inline-size: 100px;
+}
+
+.h150px {
+  block-size: 100px;
+}
+
+.circle-green {
+  border-radius: 50%;
+  background: rgb(var(--v-theme-primary));
+  block-size: 10px;
+  inline-size: 10px;
+}
+
+.big-circle {
+  z-index: 10;
+  border-radius: 50%;
+  background: transparent;
+  scale: 0;
+  transform-origin: center;
+  transition: scale 1s ease-in-out, rotate 2s ease-in-out;
+}
+
+.vh-center {
+  margin: auto;
+  inset: 0;
+}
+
+.fade-out {
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.bg-grey {
+  background: rgb(var(--v-theme-grey-300));
+}
+
+.bubble-text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 36px;
+}
+
+.reduce-h1 {
+  line-height: 1.3;
+}

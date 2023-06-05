@@ -1,0 +1,38 @@
+<script setup>
+const shortcuts = [
+  {
+    icon: 'mdi-calendar',
+    title: 'Calendar',
+    subtitle: 'Appointments',
+    to: { name: 'apps-calendar' },
+  },
+  {
+    icon: 'mdi-file-document-outline',
+    title: 'Invoice App',
+    subtitle: 'Manage Accounts',
+    to: { name: 'apps-invoice-list' },
+  },
+  {
+    icon: 'mdi-account-outline',
+    title: 'Users',
+    subtitle: 'Manage Users',
+    to: { name: 'apps-user-list' },
+  },
+  {
+    icon: 'mdi-view-dashboard-outline',
+    title: 'Dashboard',
+    subtitle: 'Dashboard Analytics',
+    to: { name: 'dashboard' },
+  },
+  {
+    icon: 'mdi-help-circle-outline',
+    title: 'Help Center',
+    subtitle: 'FAQs & Articles',
+    to: { name: 'pages-help-center' },
+  },
+]
+</script>
+
+<template>
+  <Shortcuts :shortcuts="shortcuts" />
+</template>
