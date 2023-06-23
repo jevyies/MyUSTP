@@ -302,7 +302,7 @@ const userRows = computed(() => {
           placeholder="Search User..."
           density="compact"
         />
-        <div style="width:90px;">
+        <div style="width: 90px;">
           <VSelect
             v-model="rowPerPage"
             density="compact"

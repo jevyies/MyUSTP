@@ -148,12 +148,14 @@
 
 <style lang="scss">
   .w-300 {
-    width: 300px;
+    inline-size: 300px;
   }
-  .l1{
+
+  .l1 {
     line-height: 1;
   }
-  .bg-grey{
+
+  .bg-grey {
     background: rgb(var(--v-theme-grey-200));
   }
 </style>
